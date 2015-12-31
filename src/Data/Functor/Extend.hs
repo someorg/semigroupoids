@@ -70,7 +70,7 @@ class Functor w => Extend w where
 -- instances directly avoiding the wart of orphan instances.
 
 instance Extend [] where
-  duplicated = init . tails
+  duplicated = tails
 
 instance Extend Maybe where
   duplicated Nothing = Nothing
